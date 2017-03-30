@@ -26,7 +26,7 @@ display:inline-block;
 	String s=request.getParameter("id");
 	out.println(s);
 	Class.forName("com.mysql.jdbc.Driver");
-	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/appdatabase","root","mitul123");
+	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/appdatabase","username","password");
 	PreparedStatement pst=con.prepareStatement("select * from iteams where id=?");
 	pst.setInt(1, Integer.parseInt(s));
 	ResultSet rs=pst.executeQuery();
