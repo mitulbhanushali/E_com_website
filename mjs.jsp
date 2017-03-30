@@ -42,7 +42,7 @@ display:inline-block;
 	String imgs="retriveimage.jsp?id=";
 	//String buy="buynow.jsp?id=";
 	Class.forName("com.mysql.jdbc.Driver");
-	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/appdatabase","root","mitul123");
+	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/appdatabase","username","password");
 	Statement st=con.createStatement();
 	ResultSet rs=st.executeQuery("select * from iteams");
 	while(rs.next()){
